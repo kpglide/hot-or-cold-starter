@@ -12,7 +12,7 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
-  	var SECRET = newGame();
+  	var SECRET = Math.floor(Math.random()*101);
   	var GUESS_COUNTER = 0;
 
   	$('#guessButton').click(function(event) {
@@ -39,8 +39,7 @@ $(document).ready(function(){
   		$('h2').css('background-color', '#cc324b');
   		$('#userGuess').val('Enter your Guess');
   		GUESS_COUNTER = 0;
-
-  		return Math.floor(Math.random()*101);
+      SECRET = Math.floor(Math.random()*101);
   	}
 
   	function guessHandler() {
